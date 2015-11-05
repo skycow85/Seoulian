@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_back2"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <kr.go.seoul.seoulian.component.ContentEditText
+                android:id="@+id/speaker_message"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150"
+                android:layout_margin="@dimen/dp20"
+                android:background="@color/white"
+                android:gravity="top"
+                android:hint="Insert a message to translate"
+                android:padding="@dimen/dp5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/dp17" />
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:id="@+id/btn_speaker_translate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/selector_btn_back_on_popup"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="Translate"
+                android:textColor="@color/color_content_link_selector"
+                android:textSize="@dimen/dp18" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp150"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/list_back_n"
+                android:padding="@dimen/dp5"
+                android:scrollbars="none">
+
+                <kr.go.seoul.seoulian.component.ContentTextView
+                    android:id="@+id/speaker_korean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/dp3"
+                    android:text="(Result of translation)"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp17" />
+            </ScrollView>
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:id="@+id/btn_speaker_speak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"
+                android:background="@drawable/selector_btn_back_on_popup"
+                android:gravity="center"
+                android:padding="@dimen/dp10"
+                android:text="Speak"
+                android:textColor="@color/color_content_link_selector"
+                android:textSize="@dimen/dp18" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/blur_text"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginRight="@dimen/dp20"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp20">
+
+                <kr.go.seoul.seoulian.component.ContentTextView
+                    android:id="@+id/btn_lower"
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_back"
+                    android:gravity="center"
+                    android:text="Lower"
+                    android:textColor="@color/color_content_link_selector"
+                    android:textSize="@dimen/dp15" />
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Pitch"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <kr.go.seoul.seoulian.component.ContentTextView
+                    android:id="@+id/btn_higher"
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/selector_list_back"
+                    android:gravity="center"
+                    android:text="Higher"
+                    android:textColor="@color/color_content_link_selector"
+                    android:textSize="@dimen/dp15" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp40"
+                android:layout_marginRight="@dimen/dp40"
+                android:orientation="horizontal">
+
+                <kr.go.seoul.seoulian.component.ContentTextView
+                    android:id="@+id/btn_slower"
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_list_back"
+                    android:gravity="center"
+                    android:text="Slower"
+                    android:textColor="@color/color_content_link_selector"
+                    android:textSize="@dimen/dp15" />
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text="Speed"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <kr.go.seoul.seoulian.component.ContentTextView
+                    android:id="@+id/btn_faster"
+                    android:layout_width="@dimen/dp90"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/selector_list_back"
+                    android:gravity="center"
+                    android:text="Faster"
+                    android:textColor="@color/color_content_link_selector"
+                    android:textSize="@dimen/dp15" />
+
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

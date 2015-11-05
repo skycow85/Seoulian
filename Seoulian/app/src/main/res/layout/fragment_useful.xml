@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/conven_taxi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp15"
+            android:background="@drawable/list_item_seletor"
+            android:orientation="vertical"
+            android:padding="@dimen/dp15"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp160"
+                android:layout_height="@dimen/dp40"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/logos" />
+
+            <kr.go.seoul.seoulian.component.TitleTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp10"
+                android:text="@string/useful_text_internatinaltaxi"
+                android:textAlignment="center"
+                android:textSize="@dimen/dp25"
+                android:textStyle="bold"
+                android:textColor="@color/clear_text"/>
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_internation_taxi"
+                android:textSize="@dimen/dp18"
+                android:lineSpacingExtra="@dimen/dp3"
+                android:textColor="@color/content_text"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/conven_dasan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/conven_taxi"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:background="@drawable/list_item_seletor"
+            android:orientation="vertical"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="@dimen/dp144"
+                android:layout_height="@dimen/dp45"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/dasan_logo" />
+
+            <kr.go.seoul.seoulian.component.TitleTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/useful_text_dasancall"
+                android:textAlignment="center"
+                android:textSize="@dimen/dp25"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/dp10"
+                android:textColor="@color/clear_text"/>
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description_dasan_happy_call"
+                android:textSize="@dimen/dp18"
+                android:lineSpacingExtra="@dimen/dp3"
+                android:textColor="@color/content_text"/>
+        </LinearLayout>
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+

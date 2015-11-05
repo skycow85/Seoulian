@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:id="@+id/group_major" android:checkableBehavior="single">
+        <item
+            android:id="@+id/navi_home"
+            android:icon="@drawable/home78"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/navi_tip"
+            android:icon="@drawable/seo21"
+            android:title="@string/menu_tip" />
+        <item
+            android:id="@+id/navi_storage"
+            android:icon="@drawable/heart13"
+            android:title="@string/favorites" />
+    </group>
+    <group android:id="@+id/group_sub" android:checkableBehavior="single">
+        <item
+            android:id="@+id/navi_spot"
+            android:icon="@drawable/pointer11"
+            android:title="@string/menu_spot" />
+        <item
+            android:id="@+id/navi_attraction"
+            android:icon="@drawable/luggage16"
+            android:title="@string/menu_attraction" />
+        <item
+            android:id="@+id/navi_useful"
+            android:icon="@drawable/circular_arrow36"
+            android:title="@string/menu_convenience" />
+        <item
+            android:id="@+id/navi_currency"
+            android:icon="@drawable/dollar_symbol"
+            android:title="@string/menu_economic" />
+        <item
+            android:id="@+id/navi_korean"
+            android:icon="@drawable/female205"
+            android:title="@string/korean_speaker" />
+    </group>
+    <group android:id="@+id/group_license" android:checkableBehavior="single">
+        <item
+            android:id="@+id/navi_license"
+            android:icon="@drawable/creative9"
+            android:title="@string/menu_license" />
+
+    </group>
+
+</menu>

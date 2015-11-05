@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/webview_popup_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/selector_btn_exit" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/popup_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_close"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <kr.go.seoul.seoulian.component.TitleTextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:layout_marginLeft="@dimen/dp30"
+                android:layout_marginRight="@dimen/dp30"
+                android:gravity="center"
+                android:text="TEST is BEST"
+                android:textColor="@color/clear_text"
+                android:textSize="@dimen/dp18" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginLeft="@dimen/dp25"
+                android:layout_marginRight="@dimen/dp25"
+                android:background="@color/blur_text" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15"
+                android:paddingTop="@dimen/dp10"
+                android:paddingBottom="@dimen/dp10"
+                >
+                <ImageView
+                    android:id="@+id/spot_btn_storage"
+                    android:layout_width="@dimen/dp20"
+                    android:layout_height="@dimen/dp20"
+                    android:src="@drawable/storage_off"
+                    android:clickable="true"/>
+            </LinearLayout>
+            <!-- information -->
+            <LinearLayout
+                android:id="@+id/layout_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="@string/spot_detail_information"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <kr.go.seoul.seoulian.component.ContentTextView
+                    android:id="@+id/spot_text_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/detail_bg"
+                    android:padding="@dimen/dp10"
+                    android:text="Information"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp18" />
+            </LinearLayout>
+            <!-- url -->
+            <LinearLayout
+                android:id="@+id/layout_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="@string/spot_detail_link"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:id="@+id/spot_link_scroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/spot_btn_link"
+                        android:background="@drawable/detail_bg"
+                        android:padding="@dimen/dp0"
+                        android:scrollbars="none">
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:id="@+id/spot_text_link"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp10"
+                            android:singleLine="true"
+                            android:text="http://stackoverflow.com/questions/1748977/making-textview-scrollable-in-android"
+                            android:textColor="@color/clear_text"
+                            android:textIsSelectable="true"
+                            android:textSize="@dimen/dp18" />
+                    </HorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/spot_btn_link"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp0"
+                        android:layout_alignBottom="@+id/spot_link_scroll"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/spot_link_scroll"
+                        android:clickable="true"
+                        android:src="@drawable/selector_btn_spot_link" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- phone -->
+            <LinearLayout
+                android:id="@+id/layout_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="@string/spot_detail_phone"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <HorizontalScrollView
+                        android:id="@+id/spot_phone_scroll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/spot_btn_phone"
+                        android:background="@drawable/detail_bg"
+                        android:padding="@dimen/dp0"
+                        android:scrollbars="none">
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:id="@+id/spot_text_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp10"
+                            android:singleLine="true"
+                            android:text="02-2221-1253"
+                            android:textColor="@color/clear_text"
+                            android:textIsSelectable="true"
+                            android:textSize="@dimen/dp18" />
+                    </HorizontalScrollView>
+
+                    <ImageView
+                        android:id="@+id/spot_btn_phone"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp0"
+                        android:layout_alignBottom="@+id/spot_phone_scroll"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/spot_phone_scroll"
+                        android:clickable="true"
+                        android:src="@drawable/selector_btn_spot_call" />
+                </RelativeLayout>
+            </LinearLayout>
+            <!-- fax -->
+            <LinearLayout
+                android:id="@+id/layout_fax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="@string/spot_detail_fax"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <HorizontalScrollView
+                    android:id="@+id/spot_fax_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/detail_bg"
+                    android:padding="@dimen/dp0"
+                    android:scrollbars="none">
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:id="@+id/spot_text_fax"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp10"
+                        android:text="02-7778-5412"
+                        android:textColor="@color/clear_text"
+                        android:singleLine="true"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/dp18" />
+                </HorizontalScrollView>
+            </LinearLayout>
+            <!-- email -->
+            <LinearLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="@string/spot_detail_email"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <HorizontalScrollView
+                    android:id="@+id/spot_email_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/detail_bg"
+                    android:padding="@dimen/dp0"
+                    android:scrollbars="none">
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:id="@+id/spot_text_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp10"
+                        android:text="wow@wow.com"
+                        android:textColor="@color/clear_text"
+                        android:singleLine="true"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/dp18" />
+                </HorizontalScrollView>
+            </LinearLayout>
+            <!-- address -->
+            <LinearLayout
+                android:id="@+id/layout_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp20"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp15"
+                android:paddingRight="@dimen/dp15">
+
+                <kr.go.seoul.seoulian.component.TitleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp5"
+                    android:text="@string/spot_detail_address"
+                    android:textColor="@color/clear_text"
+                    android:textSize="@dimen/dp15" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:id="@+id/spot_text_address"
+                        android:layout_width="@dimen/dp0"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="@dimen/dp10"
+                        android:layout_toLeftOf="@+id/spot_btn_address"
+                        android:background="@drawable/detail_bg"
+                        android:padding="@dimen/dp10"
+                        android:text="Daewoo Center Bldg.,Rm.1802 541,Namdaemoon-ro 5-ka,Chung-ku, Seoul, Korea"
+                        android:textColor="@color/clear_text"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/dp18" />
+
+                    <ImageView
+                        android:id="@+id/spot_btn_address"
+                        android:layout_width="@dimen/dp40"
+                        android:layout_height="@dimen/dp0"
+                        android:layout_alignBottom="@+id/spot_text_address"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/spot_text_address"
+                        android:clickable="true"
+                        android:scaleType="fitStart"
+                        android:src="@drawable/selector_btn_spot_map" />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

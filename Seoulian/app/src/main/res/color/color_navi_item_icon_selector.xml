@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 클릭 했을 경우 -->
+    <item android:state_pressed="true" android:color="@color/nav_pressed_icon"/>
+
+    <!-- 클릭하지 않은 경우 -->
+    <item android:state_pressed="false" android:color="@color/nav_normal_icon"/>
+
+</selector>

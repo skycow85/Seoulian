@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background"
+    android:orientation="vertical"
+    android:clickable="true">
+
+    <LinearLayout
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/selector_btn_exit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0"
+        android:layout_below="@+id/btn_close"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dp30"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="@dimen/dp160"
+            android:layout_height="@dimen/dp40"
+            android:src="@drawable/logos"/>
+        <kr.go.seoul.seoulian.component.TitleTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/useful_text_internatinaltaxi"
+            android:gravity="center"
+            android:textSize="@dimen/dp25"
+            android:layout_marginTop="@dimen/dp10"
+            android:textStyle="bold"
+            android:textColor="@color/clear_text"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/blur_text"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginRight="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp15"
+            android:layout_marginBottom="@dimen/dp35"/>
+        <LinearLayout
+            android:id="@+id/taxi_btn_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginRight="@dimen/dp50"
+            android:background="@drawable/selector_btn_back_on_popup"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_margin="@dimen/dp15"
+                android:src="@drawable/link21" />
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/taxi_visit_web"
+                android:textColor="@color/clear_text"
+                android:textSize="@dimen/dp22" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/taxi_btn_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginRight="@dimen/dp50"
+            android:layout_marginTop="@dimen/dp50"
+            android:background="@drawable/selector_btn_back_on_popup"
+            android:gravity="center_vertical"
+            android:clickable="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:layout_margin="@dimen/dp15"
+                android:src="@drawable/telephone46" />
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/taxi_call"
+                android:textColor="@color/clear_text"
+                android:textSize="@dimen/dp22" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

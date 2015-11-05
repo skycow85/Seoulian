@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--스크롤뷰-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.daimajia.slider.library.SliderLayout
+                android:id="@+id/slider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp250" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+                <!--TIME 구분선-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:background="@color/blur_text" />
+
+                    <kr.go.seoul.seoulian.component.TitleTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:text="@string/main_divide_time"
+                        android:textColor="@color/clear_text" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:background="@color/blur_text" />
+                </LinearLayout>
+                <!-- 시간 존-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/dp20">
+                    <!-- 한국 시간 -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginRight="@dimen/dp35">
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:id="@+id/main_time_left_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="Seoul"
+                            android:textColor="@color/blur_text"
+                            android:textSize="@dimen/dp18" />
+                        <kr.go.seoul.seoulian.component.TitleTextView
+                            android:id="@+id/main_time_left_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="10:44"
+                            android:textColor="@color/clear_text"
+                            android:textSize="@dimen/dp30" />
+                    </LinearLayout>
+                    <!-- 구분선 -->
+                    <View
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:layout_marginBottom="@dimen/dp10"
+                        android:background="#555555"/>
+                    <!-- 외국 시간 -->
+                    <LinearLayout
+                        android:id="@+id/main_time_zone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="@dimen/dp35">
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:id="@+id/main_time_right_city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/color_content_link_selector"
+                            android:textSize="@dimen/dp18" />
+                        <kr.go.seoul.seoulian.component.TitleTextView
+                            android:id="@+id/main_time_right_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/dp10"
+                            android:text="09:44"
+                            android:textColor="@color/clear_text"
+                            android:textSize="@dimen/dp30" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--CONTENTS 구분선-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:background="@color/blur_text" />
+
+                    <kr.go.seoul.seoulian.component.TitleTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:text="@string/main_divide_contents"
+                        android:textColor="@color/clear_text" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:background="@color/blur_text" />
+                </LinearLayout>
+                <!--메뉴버튼 윗줄-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/main_btn_favorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp30"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp70"
+                            android:layout_height="@dimen/dp70"
+                            android:layout_gravity="center_horizontal"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/selector_menu_favorite" />
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/favorites"
+                            android:textColor="@color/color_content_link_selector"
+                            android:textSize="@dimen/dp15" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_btn_seoullife"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp30"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp70"
+                            android:layout_height="@dimen/dp70"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/selector_menu_life" />
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:duplicateParentState="true"
+                            android:gravity="center"
+                            android:text="@string/menu_spot"
+                            android:textColor="@color/color_content_link_selector"
+                            android:textSize="@dimen/dp15" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_btn_attraction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp70"
+                            android:layout_height="@dimen/dp70"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/selector_menu_attraction" />
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:duplicateParentState="true"
+                            android:text="@string/menu_attraction"
+                            android:textColor="@color/color_content_link_selector"
+                            android:textSize="@dimen/dp15" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--메뉴버튼 아랫줄-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/main_btn_convenience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp30"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp70"
+                            android:layout_height="@dimen/dp70"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/selector_menu_useful" />
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:duplicateParentState="true"
+                            android:text="@string/menu_convenience"
+                            android:textColor="@color/color_content_link_selector"
+                            android:textSize="@dimen/dp15" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_btn_economic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/dp30"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp70"
+                            android:layout_height="@dimen/dp70"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/selector_menu_currency" />
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:duplicateParentState="true"
+                            android:text="@string/menu_economic"
+                            android:textColor="@color/color_content_link_selector"
+                            android:textSize="@dimen/dp15" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/main_btn_speak"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp70"
+                            android:layout_height="@dimen/dp70"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/selector_menu_speak" />
+
+                        <kr.go.seoul.seoulian.component.ContentTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:duplicateParentState="true"
+                            android:text="Korean\nSpeaker"
+                            android:textColor="@color/color_content_link_selector"
+                            android:textSize="@dimen/dp15" />
+                    </LinearLayout>
+                </LinearLayout>
+                <!--LINK 구분선-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:background="@color/blur_text" />
+
+                    <kr.go.seoul.seoulian.component.TitleTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:text="@string/menu_divide_link"
+                        android:textColor="@color/clear_text" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1px"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:layout_weight="1"
+                        android:background="@color/blur_text" />
+                </LinearLayout>
+                <!--링크-->
+                <LinearLayout
+                    android:id="@+id/link_visitseoul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@drawable/selector_list_back"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginLeft="@dimen/dp30"
+                        android:layout_marginRight="@dimen/dp30"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_visitseoul" />
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/menu_link_visitseoul"
+                        android:textColor="@color/color_content_link_selector"
+                        android:textSize="@dimen/dp18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/link_seoulstay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@drawable/selector_list_back"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginLeft="@dimen/dp30"
+                        android:layout_marginRight="@dimen/dp30"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_seoulstay" />
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/menu_link_seoulstay"
+                        android:textColor="@color/color_content_link_selector"
+                        android:textSize="@dimen/dp18" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/link_visitkorea"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp20"
+                    android:background="@drawable/selector_list_back"
+                    android:clickable="true"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp200"
+                        android:layout_height="@dimen/dp50"
+                        android:layout_marginLeft="@dimen/dp30"
+                        android:layout_marginRight="@dimen/dp30"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_visitkorea" />
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/dp10"
+                        android:text="@string/menu_link_visitkorea"
+                        android:textColor="@color/color_content_link_selector"
+                        android:textSize="@dimen/dp18" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

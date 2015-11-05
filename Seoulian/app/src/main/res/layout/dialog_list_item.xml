@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <kr.go.seoul.seoulian.component.ContentTextView
+        android:id="@+id/dialog_list_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="@dimen/dp18"
+        android:textColor="@color/color_bright_btn_selector"
+        android:padding="@dimen/dp5"
+        android:layout_marginTop="@dimen/dp5"
+        android:layout_marginBottom="@dimen/dp5"
+        android:gravity="center"/>
+
+</LinearLayout>

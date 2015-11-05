@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dialog_background"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/selector_btn_exit" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btn_close"
+        android:gravity="center">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <!-- 112 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginRight="@dimen/dp50"
+                    android:orientation="vertical">
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:gravity="center"
+                        android:text="@string/police"
+                        android:textColor="@color/clear_text"
+                        android:textSize="@dimen/dp25" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_112"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:background="@drawable/selector_btn_112"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp20">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="@dimen/dp40"
+                            android:src="@drawable/btn_emerg_icon" />
+
+                        <kr.go.seoul.seoulian.component.TitleTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/btn_112"
+                            android:textColor="@color/clear_text"
+                            android:textSize="@dimen/dp30" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- 119 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginRight="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp40"
+                    android:orientation="vertical">
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:gravity="center"
+                        android:text="@string/emergency"
+                        android:textColor="@color/clear_text"
+                        android:textSize="@dimen/dp25" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_119"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:background="@drawable/selector_btn_119"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp20">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="@dimen/dp40"
+                            android:src="@drawable/btn_emerg_icon" />
+
+                        <kr.go.seoul.seoulian.component.TitleTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/btn_emergency_title"
+                            android:textColor="@color/clear_text"
+                            android:textSize="@dimen/dp30" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- 1330 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginRight="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp40"
+                    android:orientation="vertical">
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:gravity="center"
+                        android:text="@string/tourist_police"
+                        android:textColor="@color/clear_text"
+                        android:textSize="@dimen/dp25" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_1330"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:background="@drawable/selector_btn_1330"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp20">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="@dimen/dp40"
+                            android:src="@drawable/btn_emerg_icon" />
+
+                        <kr.go.seoul.seoulian.component.TitleTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/btn_tourlist_title"
+                            android:textColor="@color/clear_text"
+                            android:textSize="@dimen/dp30" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- 120 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp50"
+                    android:layout_marginRight="@dimen/dp50"
+                    android:layout_marginTop="@dimen/dp40"
+                    android:orientation="vertical">
+
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp5"
+                        android:gravity="center"
+                        android:text="@string/complaint"
+                        android:textColor="@color/clear_text"
+                        android:textSize="@dimen/dp25" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_120"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:layout_marginRight="@dimen/dp20"
+                        android:background="@drawable/selector_btn_120"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp20">
+
+                        <ImageView
+                            android:layout_width="@dimen/dp40"
+                            android:layout_height="@dimen/dp40"
+                            android:src="@drawable/btn_emerg_icon" />
+
+                        <kr.go.seoul.seoulian.component.TitleTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/btn_complaint_title"
+                            android:textColor="@color/clear_text"
+                            android:textSize="@dimen/dp30" />
+                    </LinearLayout>
+                    <kr.go.seoul.seoulian.component.ContentTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp5"
+                        android:gravity="center"
+                        android:text="@string/btn_complaint_desc"
+                        android:textColor="@color/clear_text"
+                        android:textSize="@dimen/dp20" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

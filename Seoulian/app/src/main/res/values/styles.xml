@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.AppCompat.Light.NoActionBar" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item> <!-- For 2.x version  -->
+        <item name="android:windowBackground">@drawable/app_background</item>
+    </style>
+    <style name="style_progress_loading_small">
+        <item name="android:indeterminateDrawable">@anim/animation_loading</item>
+        <item name="android:minHeight">@dimen/dp26</item>
+        <item name="android:maxHeight">@dimen/dp26</item>
+        <item name="android:minWidth">@dimen/dp26</item>
+        <item name="android:maxWidth">@dimen/dp26</item>
+    </style>
+    <style name="style_progress_loading">
+        <item name="android:indeterminateDrawable">@anim/animation_loading</item>
+    </style>
+</resources>

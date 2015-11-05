@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/help_me_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efffffff"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <kr.go.seoul.seoulian.component.TitleTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/red"
+            android:text="* CAUTION *"
+            android:textSize="@dimen/dp20"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp40"
+            android:layout_marginBottom="@dimen/dp20"/>
+        <kr.go.seoul.seoulian.component.ContentTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="It will be played\n'HELP ME' in Korean\nLoudly in 5 seconds"
+            android:lineSpacingExtra="@dimen/dp3"
+            android:textSize="@dimen/dp18"
+            android:gravity="center"/>
+        <kr.go.seoul.seoulian.component.TitleTextView
+            android:id="@+id/help_me_count"
+            android:layout_width="@dimen/dp130"
+            android:layout_height="@dimen/dp130"
+            android:background="@drawable/border_blur"
+            android:textSize="@dimen/dp80"
+            android:textColor="@color/clear_red"
+            android:text="5"
+            android:layout_marginTop="@dimen/dp20"
+            android:layout_marginBottom="@dimen/dp20"
+            android:gravity="center"/>
+        <kr.go.seoul.seoulian.component.ContentTextView
+            android:id="@+id/btn_stop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:text="STOP"
+            android:lineSpacingExtra="@dimen/dp3"
+            android:layout_margin="@dimen/dp10"
+            android:background="@drawable/selector_btn_back_on_popup"
+            android:textSize="@dimen/dp25"
+            android:gravity="center"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/selector_btn_exit" />
+    </LinearLayout>
+</RelativeLayout>

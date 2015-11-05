@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/webview_popup_background"
+    android:paddingLeft="@dimen/dp5"
+    android:paddingRight="@dimen/dp5"
+    android:clickable="true">
+    <LinearLayout
+        android:id="@+id/btn_close"
+        android:layout_width="@dimen/dp30"
+        android:layout_height="@dimen/dp30"
+        android:gravity="center"
+        android:clickable="true"
+        android:layout_alignParentRight="true">
+
+        <ImageView
+            android:layout_width="@dimen/dp15"
+            android:layout_height="@dimen/dp15"
+            android:src="@drawable/selector_btn_exit" />
+    </LinearLayout>
+    <kr.go.seoul.seoulian.component.TitleTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp30"
+        android:layout_toLeftOf="@+id/btn_close"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/clear_text"
+        android:textSize="@dimen/dp12"
+        android:layout_marginLeft="@dimen/dp5"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:gravity="center_vertical"/>
+    <WebView
+        android:id="@+id/webview"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/btn_close"/>
+</RelativeLayout>

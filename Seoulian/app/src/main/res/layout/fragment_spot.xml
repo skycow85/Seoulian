@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="@dimen/dp5"
+        android:background="@drawable/select_category_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/spot_category"
+            android:layout_width="@dimen/dp130"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@drawable/selector_list_back_no_border"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/icn_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icn_arrow_down_white" />
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:id="@+id/spot_category_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/icn_arrow"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="CATEGORY"
+                android:textColor="@color/clear_text" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/spot_section"
+            android:layout_width="@dimen/dp130"
+            android:layout_height="@dimen/dp35"
+            android:layout_marginBottom="@dimen/dp5"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginTop="@dimen/dp5"
+            android:background="@drawable/selector_list_back_no_border"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/icn_arrow2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icn_arrow_down_white" />
+
+            <kr.go.seoul.seoulian.component.ContentTextView
+                android:id="@+id/spot_section_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/icn_arrow2"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="SECTION"
+                android:textColor="@color/clear_text" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/spot_btn_search"
+            android:layout_width="@dimen/dp35"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dp15"
+            android:layout_marginRight="@dimen/dp15"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp35"
+                android:layout_height="@dimen/dp35"
+                android:src="@drawable/selector_search_btn" />
+        </LinearLayout>
+    </LinearLayout>
+    <kr.go.seoul.seoulian.component.SpotContentList
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_below="@+id/layout_condition"
+        android:layout_marginBottom="@dimen/dp5"
+        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp15"
+        android:dividerHeight="@dimen/dp5"
+        android:divider="@color/transparent"
+        android:scrollbars="none"/>
+</RelativeLayout>
